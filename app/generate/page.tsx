@@ -1,43 +1,24 @@
-// app/generate/page.tsx
-
-'use client';
-
-import { useState } from 'react';
-
-export default function Generate() {
-  const [input, setInput] = useState('');
-  const [output, setOutput] = useState('');
-
-  function handleGenerate() {
-    if (input.trim()) {
-      setOutput(
-        `📄 Agreement Draft:\n\nThis agreement is generated based on your input:\n\n"${input}"`
-      );
-    } else {
-      setOutput('Please enter a valid input.');
-    }
-  }
-
+export default function Home() {
   return (
-    <main className="max-w-2xl mx-auto p-10 text-center">
-      <h1 className="text-3xl font-bold mb-6 text-blue-700">DraftMyAgreement</h1>
-      <textarea
-        className="w-full h-32 p-4 border rounded mb-4"
-        placeholder="Describe your deal in plain English..."
-        value={input}
-        onChange={(e) => setInput(e.target.value)}
-      />
-      <button
-        className="bg-blue-600 text-white px-6 py-2 rounded hover:bg-blue-700"
-        onClick={handleGenerate}
-      >
-        Generate Agreement
-      </button>
-      {output && (
-        <pre className="bg-gray-100 text-left mt-6 p-4 rounded whitespace-pre-wrap">
-          {output}
-        </pre>
-      )}
-    </main>
-  );
+    <div className="max-w-4xl mx-auto">
+      <h1 className="text-4xl font-bold mb-6 text-blue-700">Welcome to DraftMyAgreement</h1>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="bg-white shadow p-6 rounded-lg">
+          <h2 className="text-xl font-bold">Free</h2>
+          <p className="mt-2 text-sm">Basic contract generation</p>
+          <p className="mt-4 font-semibold text-lg">₹0</p>
+        </div>
+        <div className="bg-white shadow p-6 rounded-lg border-2 border-blue-600">
+          <h2 className="text-xl font-bold text-blue-700">Pro</h2>
+          <p className="mt-2 text-sm">Advanced customization</p>
+          <p className="mt-4 font-semibold text-lg">₹299/mo</p>
+        </div>
+        <div className="bg-white shadow p-6 rounded-lg">
+          <h2 className="text-xl font-bold">Enterprise</h2>
+          <p className="mt-2 text-sm">Custom workflows + support</p>
+          <p className="mt-4 font-semibold text-lg">Contact Us</p>
+        </div>
+      </div>
+    </div>
+  )
 }
