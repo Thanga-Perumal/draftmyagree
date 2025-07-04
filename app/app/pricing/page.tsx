@@ -1,12 +1,13 @@
-export default function Home() {
+// app/pricing/page.tsx
+export default function Pricing() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center p-24">
-      <h1 className="text-5xl font-bold text-blue-700">
-        DraftMyAgreement – AI Contract Tool
-      </h1>
-      <p className="mt-6 text-xl text-gray-600 text-center max-w-xl">
-        Create and customize legal agreements effortlessly using AI. Fast, reliable, and built for lawyers and startups.
-      </p>
+    <main style={{ padding: '2rem', fontFamily: 'Arial, sans-serif' }}>
+      <h1>Pricing</h1>
+      <ul>
+        <li>Free Plan – ₹0/month</li>
+        <li>Pro Plan – ₹499/month</li>
+        <li>Enterprise – Contact us</li>
+      </ul>
     </main>
   );
 }
