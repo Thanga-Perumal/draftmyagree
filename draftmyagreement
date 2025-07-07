@@ -1,0 +1,3 @@
+git add .
+git commit -m "Final working structure for Vercel deploy"
+git push origin main
