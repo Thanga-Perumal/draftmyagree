@@ -1,18 +1,48 @@
-// pages/pricing.tsx
-import Header from '../components/Header'
+'use client';
 
-export default function Pricing() {
+import Image from 'next/image';
+import { useState } from 'react';
+
+export default function Home() {
+  const [query, setQuery] = useState('');
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    alert(`Searching for: ${query}`);
+  };
+
   return (
-    <>
-      <Header />
-      <main className="min-h-screen px-6 py-10 bg-blue-50 text-gray-800">
-        <h1 className="text-3xl font-bold mb-4">Pricing</h1>
-        <ul className="text-lg space-y-4">
-          <li><strong>Free Plan:</strong> 3 agreements/month</li>
-          <li><strong>Pro Plan:</strong> ₹299/month - Unlimited agreements</li>
-          <li><strong>Enterprise:</strong> Contact us for custom solutions</li>
-        </ul>
-      </main>
-    </>
-  )
+    <main className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
+      {/* Logo and Brand Name */}
+      <div className="flex flex-col items-center mb-10">
+        <Image
+          src="/logo.png" // make sure the logo is in /public folder
+          alt="Logo"
+          width={120}
+          height={120}
+          className="mb-4"
+        />
+        <h1 className="text-3xl font-bold text-blue-600">DraftMyAgreement</h1>
+      </div>
+
+      {/* Search Bar */}
+      <form onSubmit={handleSearch} className="w-full max-w-md">
+        <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm">
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search your agreement..."
+            className="w-full px-4 py-3 focus:outline-none text-gray-700"
+          />
+          <button
+            type="submit"
+            className="bg-blue-600 text-white px-6 py-3 font-semibold hover:bg-blue-700"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+    </main>
+  );
 }
