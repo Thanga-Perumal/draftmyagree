@@ -1,33 +1,21 @@
 // app/page.tsx
-'use client'
-import { useState } from 'react'
 
-export default function Home() {
-  const [query, setQuery] = useState('')
-
-  const handleSearch = () => {
-    alert(`You searched for: ${query}`)
-    // Later: handle real search logic
-  }
-
+export default function HomePage() {
   return (
-    <div className="flex flex-col items-center justify-center min-h-[60vh] space-y-6">
-      <h2 className="text-3xl font-semibold">Start drafting your agreement</h2>
-      <div className="flex items-center space-x-2">
-        <input
-          type="text"
-          placeholder="Enter agreement type..."
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          className="px-4 py-2 border rounded-lg w-80 text-gray-800"
-        />
-        <button
-          onClick={handleSearch}
-          className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition"
-        >
-          Search
-        </button>
-      </div>
-    </div>
-  )
+    <main style={{ textAlign: "center", marginTop: "100px" }}>
+      <img src="/logo.png" alt="Logo" width={120} height={120} />
+      <h1 style={{ color: "blue", fontSize: "2rem", margin: "20px 0" }}>DraftMyAgreement</h1>
+      <input
+        type="text"
+        placeholder="Search..."
+        style={{
+          padding: "10px",
+          width: "300px",
+          fontSize: "1rem",
+          borderRadius: "8px",
+          border: "1px solid #ccc",
+        }}
+      />
+    </main>
+  );
 }
