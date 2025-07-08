@@ -1,4 +1,5 @@
 // app/layout.tsx
+<<<<<<< HEAD
 
 import './globals.css'
 import Image from 'next/image'
@@ -12,6 +13,8 @@ export const metadata = {
   description: 'AI-powered legal document drafting tool',
 }
 
+=======
+>>>>>>> 7897bf55aeb84afaa00c887d62a8cec1158f7f03
 export default function RootLayout({
   children,
 }: {
@@ -19,6 +22,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+<<<<<<< HEAD
       <body className={inter.className}>
         {/* HEADER with logo and nav links */}
         <header className="flex justify-between items-center p-4 border-b shadow-sm">
@@ -43,4 +47,9 @@ export default function RootLayout({
       </body>
     </html>
   )
+=======
+      <body>{children}</body>
+    </html>
+  );
+>>>>>>> 7897bf55aeb84afaa00c887d62a8cec1158f7f03
 }

@@ -1,5 +1,6 @@
 'use client';
 
+<<<<<<< HEAD
 import Image from 'next/image';
 import { useState } from 'react';
 
@@ -44,5 +45,13 @@ export default function Home() {
         </div>
       </form>
     </main>
+=======
+export default function Home() {
+  return (
+    <div className="p-6 text-center">
+      <h1 className="text-3xl font-bold text-blue-600">DraftMyAgreement</h1>
+      <p className="mt-4 text-gray-700">Your AI-powered legal assistant.</p>
+    </div>
+>>>>>>> 7897bf55aeb84afaa00c887d62a8cec1158f7f03
   );
 }
