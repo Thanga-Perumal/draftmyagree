@@ -11,7 +11,7 @@ export const metadata = {
   title: 'DraftMyAgreement',
   description: 'AI-powered legal document drafting tool',
 }
-7897bf55aeb84afaa00c887d62a8cec1158f7f03
+
 export default function RootLayout({
   children,
 }: {
