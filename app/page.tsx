@@ -1,57 +1,23 @@
 'use client';
 
-<<<<<<< HEAD
 import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Home() {
-  const [query, setQuery] = useState('');
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    alert(`Searching for: ${query}`);
-  };
-
   return (
-    <main className="flex flex-col items-center justify-center min-h-screen bg-white px-4">
-      {/* Logo and Brand Name */}
-      <div className="flex flex-col items-center mb-10">
+    <main className="min-h-screen flex flex-col items-center justify-center bg-gray-50 p-6">
+      <h1 className="text-4xl font-bold text-blue-700 mb-6">Welcome to 42law</h1>
+      <p className="text-lg text-gray-600 text-center max-w-xl">
+        Legal solutions powered by technology. We provide fast, reliable, and affordable legal services for modern businesses.
+      </p>
+      <div className="mt-8">
         <Image
-          src="/logo.png" // make sure the logo is in /public folder
-          alt="Logo"
+          src="/logo.png"
+          alt="42law logo"
           width={120}
           height={120}
-          className="mb-4"
         />
-        <h1 className="text-3xl font-bold text-blue-600">DraftMyAgreement</h1>
       </div>
-
-      {/* Search Bar */}
-      <form onSubmit={handleSearch} className="w-full max-w-md">
-        <div className="flex items-center border border-gray-300 rounded-full overflow-hidden shadow-sm">
-          <input
-            type="text"
-            value={query}
-            onChange={(e) => setQuery(e.target.value)}
-            placeholder="Search your agreement..."
-            className="w-full px-4 py-3 focus:outline-none text-gray-700"
-          />
-          <button
-            type="submit"
-            className="bg-blue-600 text-white px-6 py-3 font-semibold hover:bg-blue-700"
-          >
-            Search
-          </button>
-        </div>
-      </form>
     </main>
-=======
-export default function Home() {
-  return (
-    <div className="p-6 text-center">
-      <h1 className="text-3xl font-bold text-blue-600">DraftMyAgreement</h1>
-      <p className="mt-4 text-gray-700">Your AI-powered legal assistant.</p>
-    </div>
->>>>>>> 7897bf55aeb84afaa00c887d62a8cec1158f7f03
   );
 }
