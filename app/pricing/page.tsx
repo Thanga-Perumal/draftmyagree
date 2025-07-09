@@ -1,10 +1,10 @@
 // pages/pricing.tsx
-import Header from '../components/Header'
+import Header from '../../components/Header'
 
 export default function Pricing() {
   return (
     <>
-      <Header />
+    
       <main className="min-h-screen px-6 py-10 bg-blue-50 text-gray-800">
         <h1 className="text-3xl font-bold mb-4">Pricing</h1>
         <ul className="text-lg space-y-4">

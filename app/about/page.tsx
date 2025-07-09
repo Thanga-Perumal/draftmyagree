@@ -4,18 +4,7 @@ import Image from "next/image";
 export default function About() {
   return (
     <main className="min-h-screen bg-gray-50 text-gray-800 flex flex-col">
-      {/* Header */}
-      <header className="flex justify-between items-center px-6 py-4 bg-white shadow">
-        <div className="flex items-center space-x-3">
-          <Image src="/logo.png" alt="Logo" width={40} height={40} />
-          <span className="text-2xl font-bold text-blue-700">DraftMyAgreement</span>
-        </div>
-        <nav className="space-x-6 text-sm text-gray-600">
-          <Link href="/" className="hover:text-blue-600">Home</Link>
-          <Link href="/about" className="hover:text-blue-600">About</Link>
-          <Link href="/pricing" className="hover:text-blue-600">Pricing</Link>
-        </nav>
-      </header>
+
 
       {/* About content */}
       <section className="flex-1 px-6 py-12 max-w-3xl mx-auto text-center">
@@ -31,10 +20,7 @@ export default function About() {
         </p>
       </section>
 
-      {/* Footer */}
-      <footer className="text-center py-6 text-sm text-gray-500">
-        &copy; {new Date().getFullYear()} DraftMyAgreement. All rights reserved.
-      </footer>
+  
     </main>
   );
 }
